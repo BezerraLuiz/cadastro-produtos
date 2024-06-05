@@ -1,0 +1,17 @@
+nav {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    background-color: #4CAF50;
+    gap: 50px;
+    margin-bottom: 10px;
+}
+
+nav ul a {
+    margin-left: 20px;
+    margin-right: 20px;
+    text-decoration: none;
+    color: white;
+}

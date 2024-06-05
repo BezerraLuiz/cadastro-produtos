@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import ProductTable from './components/ProductTable'
 import ProductForm from './components/ProductForm'
+import Navbar from './components/Navbar';
 
 // CRUD COM JSON SERVER
 
@@ -106,7 +107,7 @@ function App() {
 
   return (
     <>
-     <h2>CRUD com JSON Server</h2>
+     <Navbar/>
      <div>
         {
           products.length > 0 ? <ProductTable products={products} deleteProduct={deleteProduct} editProduct={getProductById} /> : <h3 style={{marginBottom: '30px'}}>Nenhum produto cadastrado...</h3>
