@@ -13,5 +13,3 @@ Desenvolvimento da tela de login, utilizando o framework React.js, JSON server e
 - Framework React.JS
 - JSON Server
 - Requisições HTTP
-
-[Codigo Fonte]()
