@@ -2,7 +2,7 @@
 
 ### Integrantes
 Luiz Antônio Ponciano Costa Bezerra - @BezerraLuiz<br>
-Ana Beatriz Meller - AnaBea07<br>
+Ana Beatriz Meller - @AnaBea07<br>
 ...
 
 Sistema de cadastro de produtos, com edição, delete, busca (visão geral do produto) e geração de relatório '.csv'.
