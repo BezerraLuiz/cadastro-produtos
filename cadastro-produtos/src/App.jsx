@@ -114,6 +114,7 @@ function App() {
   return (
     <>
       <Navbar />
+      
       <div>
         {products.length > 0 ? (
           <ProductTable

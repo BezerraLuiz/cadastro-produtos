@@ -1,8 +1,10 @@
+import { Outlet } from 'react-router-dom'
 import './Navbar.css'
 
 function Navbar() {
     return (
         <>
+            <Outlet/>
             <nav>
                 <ul><a href="">Cadastrar Produto</a></ul>
                 <ul><a href="">Editar Produto</a></ul>
