@@ -8,32 +8,44 @@ import EditarProduto from './routes/EditarProduto.jsx'
 import FiltragemCategoria from './routes/FiltragemCategoria.jsx'
 import VisualizacaoProdutos from './routes/VisualizacaoProdutos.jsx'
 import ExportarArquivo from './routes/ExportarArquivo.jsx'
+import Login from './routes/Login.jsx'
+import Registrar from './routes/Registrar.jsx'
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App/>
+    element: <App/>,
+    children: [
+      {
+        path: "/cadastrar",
+        element: <CadastroProduto/>
+      },
+      {
+        path: "/editar/:id",
+        element: <EditarProduto/>
+      },
+      {
+        path: "/filtragem",
+        element: <FiltragemCategoria/>
+      },
+      {
+        path:"/visualizar",
+        element: <VisualizacaoProdutos/>
+      },
+      {
+        path:"/exportar",
+        element: <ExportarArquivo/>
+      }
+    ],
   },
   {
-    path: "/cadastrar",
-    element: <CadastroProduto/>
+    path: 'login',
+    element: <Login/>
   },
   {
-    path: "/editar/:id",
-    element: <EditarProduto/>
+    path: 'registrar',
+    element: <Registrar/>
   },
-  {
-    path: "/filtragem",
-    element: <FiltragemCategoria/>
-  },
-  {
-    path:"/visualizar",
-    element: <VisualizacaoProdutos/>
-  },
-  {
-    path:"/exportar",
-    element: <ExportarArquivo/>
-  }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(

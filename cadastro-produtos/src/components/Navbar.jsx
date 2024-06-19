@@ -1,29 +1,44 @@
-import { NavLink, Outlet } from 'react-router-dom'
-import './Navbar.css'
-import React from 'react'
+import { NavLink } from 'react-router-dom';
+import './Navbar.css';
+import React from 'react';
+
 function Navbar() {
     return (
         <>
-            <Outlet/>
             <nav>
                 <ul>
-                    <span> <NavLink to={'/cadastrar'} className={({isActive}) => (isActive ? 'active': '')}><a href=''>Cadastrar Produto</a></NavLink></span>
+                    <NavLink to={'/cadastrar'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Cadastrar Produto
+                    </NavLink>
                 </ul>
                 <ul>
-                    <span> <NavLink to={'/editar/:id'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Editar Produto</a></NavLink></span>
+                    <NavLink to={'/editar/:id'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Editar Produto
+                    </NavLink>
                 </ul>
                 <ul>
-                    <span> <NavLink to={'/filtragem'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Filtragem de Produto</a></NavLink></span>
+                    <NavLink to={'/excluir/:id'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Excluir Produto
+                    </NavLink>
                 </ul>
                 <ul>
-                    <span> <NavLink to={'/visualizar'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Visualização Detalhada</a></NavLink></span>
+                    <NavLink to={'/visualizar'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Visualização Detalhada
+                    </NavLink>
                 </ul>
                 <ul>
-                    <span><NavLink to={'/exportar'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Exportar Relatório</a></NavLink></span>
-                    </ul>
+                    <NavLink to={'/exportar'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Exportar Relatório
+                    </NavLink>
+                </ul>
+                <ul>
+                    <NavLink to={'/login'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                        Login
+                    </NavLink>
+                </ul>
             </nav>
         </>
-    )
+    );
 }
 
-export default Navbar
+export default Navbar;

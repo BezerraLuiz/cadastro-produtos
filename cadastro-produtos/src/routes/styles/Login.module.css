@@ -1,0 +1,66 @@
+#container_background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #4CAF50;
+}
+
+#container_main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.form_login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.label_input {
+  margin-top: 10px;
+  align-self: flex-start;
+  color: white;
+  font-weight: 400;
+}
+
+.input_form {
+  border: none;
+  width: 250px;
+  height: 25px;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.input_form:hover {
+  background-color: #b1b1b1;
+}
+
+#input_pass {
+  margin-bottom: 20px;
+}
+
+#btn_entrar {
+  background-color: white;
+  width: 250px;
+  height: 20px;
+  border: none;
+  font-weight: 600;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#btn_entrar:hover {
+  background-color: #b1b1b1;
+}
+
+#container_nao_conta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
