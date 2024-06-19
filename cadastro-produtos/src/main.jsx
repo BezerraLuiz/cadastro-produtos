@@ -5,7 +5,7 @@ import './index.css'
 import { createBrowserRouter, Router, RouterProvider } from 'react-router-dom'
 import CadastroProduto from './routes/CadastroProduto.jsx'
 import EditarProduto from './routes/EditarProduto.jsx'
-import ExcluirProduct from './routes/ExcluirProduto.jsx'
+import FiltragemCategoria from './routes/FiltragemCategoria.jsx'
 import VisualizacaoProdutos from './routes/VisualizacaoProdutos.jsx'
 import ExportarArquivo from './routes/ExportarArquivo.jsx'
 
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
     element: <EditarProduto/>
   },
   {
-    path: "/excluir/:id",
-    element: <ExcluirProduct/>
+    path: "/filtragem",
+    element: <FiltragemCategoria/>
   },
   {
     path:"/visualizar",

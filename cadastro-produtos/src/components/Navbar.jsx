@@ -13,7 +13,7 @@ function Navbar() {
                     <span> <NavLink to={'/editar/:id'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Editar Produto</a></NavLink></span>
                 </ul>
                 <ul>
-                    <span> <NavLink to={'/excluir/:id'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Excluir Produto</a></NavLink></span>
+                    <span> <NavLink to={'/filtragem'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Filtragem de Produto</a></NavLink></span>
                 </ul>
                 <ul>
                     <span> <NavLink to={'/visualizar'} className={({isActive}) => (isActive ? 'active': '')}><a href="">Visualização Detalhada</a></NavLink></span>
