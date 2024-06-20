@@ -1,3 +1,9 @@
 {
-  "users": []
+  "users": [
+    {
+      "id": "b8bc",
+      "usuario": "admin",
+      "senha": "admin"
+    },
+  ]
 }

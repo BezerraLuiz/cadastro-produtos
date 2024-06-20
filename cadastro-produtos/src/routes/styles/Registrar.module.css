@@ -57,3 +57,9 @@
 #btn_registrar:hover {
   background-color: #b1b1b1;
 }
+
+#mensagem_container {
+  position: absolute;
+  margin-top: 350px;
+  margin-right: 30px;
+}

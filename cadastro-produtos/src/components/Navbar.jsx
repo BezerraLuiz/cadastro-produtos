@@ -1,43 +1,75 @@
-import { NavLink } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { NavLink, useParams } from 'react-router-dom';
 import './Navbar.css';
-import React from 'react';
 
-function Navbar() {
+function Navbar(props) {
+    const [admin, setAdmin] = useState(false);
+    const usuarioAtual = props.usuarioAtual;
+
+    useEffect(() => {
+        console.log('Usuário atual: ' + usuarioAtual);
+
+        if (usuarioAtual === 'admin') {
+            setAdmin(true);
+        } else {
+            setAdmin(false);
+        }
+    }, [usuarioAtual]);
+
     return (
-        <>
-            <nav>
+        <nav>
+            <ul>
+                <NavLink to="/cadastrar" activeclassname="active">
+                    Cadastrar Produto
+                </NavLink>
+            </ul>
+            <ul>
+                <NavLink to="/editar/:id" activeclassname="active">
+                    Editar Produto
+                </NavLink>
+            </ul>
+            <ul>
+                <NavLink to="/excluir/:id" activeclassname="active">
+                    Excluir Produto
+                </NavLink>
+            </ul>
+            <ul>
+                <NavLink to="/visualizar" activeclassname="active">
+                    Visualização Detalhada
+                </NavLink>
+            </ul>
+            <ul>
+                <NavLink to="/exportar" activeclassname="active">
+                    Exportar Relatório
+                </NavLink>
+            </ul>
+            {admin ? (
+                <>
+                    <ul>
+                        <NavLink to="/usuarios" activeclassname="active">
+                            Usuários
+                        </NavLink>
+                    </ul>
+                    <ul>
+                        <NavLink to="/login" activeclassname="active">
+                            Logout
+                        </NavLink>
+                    </ul>
+                </>
+            ) : usuarioAtual === '' ? (
                 <ul>
-                    <NavLink to={'/cadastrar'} className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Cadastrar Produto
-                    </NavLink>
-                </ul>
-                <ul>
-                    <NavLink to={'/editar/:id'} className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Editar Produto
-                    </NavLink>
-                </ul>
-                <ul>
-                    <NavLink to={'/excluir/:id'} className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Excluir Produto
-                    </NavLink>
-                </ul>
-                <ul>
-                    <NavLink to={'/visualizar'} className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Visualização Detalhada
-                    </NavLink>
-                </ul>
-                <ul>
-                    <NavLink to={'/exportar'} className={({ isActive }) => (isActive ? 'active' : '')}>
-                        Exportar Relatório
-                    </NavLink>
-                </ul>
-                <ul>
-                    <NavLink to={'/login'} className={({ isActive }) => (isActive ? 'active' : '')}>
+                    <NavLink to="/login" activeclassname="active">
                         Login
                     </NavLink>
                 </ul>
-            </nav>
-        </>
+            ) : (
+                <ul>
+                    <NavLink to="/login" activeclassname="active">
+                        Login
+                    </NavLink>
+                </ul>
+            )}
+        </nav>
     );
 }
 

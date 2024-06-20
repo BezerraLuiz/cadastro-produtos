@@ -64,3 +64,9 @@
   align-items: center;
   gap: 40px;
 }
+
+#mensagem_container {
+  position: absolute;
+  margin-top: 350px;
+  margin-right: 30px;
+}
