@@ -15,28 +15,43 @@ const Login = () => {
     setError('');
 
     try {
-      const retorno = await axios.get(`http://localhost:5000/users?username=${usuario}`);
+      const response = await axios.get(`http://localhost:5000/users?username=${usuario}`); 
 
-      const users = retorno.data;
+      const users = response.data;
+      console.log('Usuários: ' + JSON.stringify(users, null, 2));
 
-      if (users.length === 0) {
-        setError('Usuário não encontrado.');
+      if (users.length == 0) {
+        setError('Nenhum usuário cadastrado!');
         return;
       }
-
+      console.log('Existe usuários cadastrados!');
+      
+      console.log('Verificando usuários.')
+      let userFound = false;
+      
       users.forEach(user => {
-        if (user.senha != senha && user.usuario != usuario) {
-          setError('Senha Incorreta!');
-          return;
-        }
+        console.log('Verificando usuário: ' + JSON.stringify(user, null, 2));
+
+        if (user.usuario == usuario) {
+          userFound = true;
+          console.log('If de verificação do usuário, userFound = ' + userFound);
+          if (user.senha != senha) {
+            setError('Senha incorreta!');
+            return;
+          };
+        };
       });
 
-      // Redirecionar para a página inicial
-      var usuarioAtual = usuario;
-      navigate('/');
+      if (!userFound) {
+        console.log('If de verificação do userFound, userFound = ' + userFound);
+        setError('Usuário não encontrado!');
+        return;
+      }
+      
+      navigate('/'); // Redirecionar para a página principal.
     } catch (error) {
-      setError('Erro ao tentar fazer login.');
-    }
+      setError('Erro ao tentar fazer login!');
+    };
   };
 
   return (
