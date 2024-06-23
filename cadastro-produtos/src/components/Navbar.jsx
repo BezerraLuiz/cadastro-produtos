@@ -3,20 +3,6 @@ import { NavLink, useParams } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const loggedInUser = localStorage.getItem("user");
-    if (loggedInUser) {
-      setIsLoggedIn(true);
-      setUser(JSON.parse(loggedInUser));
-    } else {
-      setIsLoggedIn(false);
-      setUser(null);
-    }
-  }, []);
-
   return (
     <nav>
       <ul>
@@ -44,26 +30,11 @@ function Navbar() {
           Exportar Relatório
         </NavLink>
       </ul>
-      {isLoggedIn ? (
-        <>
-          <ul>
-            <NavLink to="/usuarios" activeclassname="active">
-              Usuários
-            </NavLink>
-          </ul>
-          <ul>
-            <NavLink to="/login" activeclassname="active">
-              Logout
-            </NavLink>
-          </ul>
-        </>
-      ) : (
-        <ul>
-          <NavLink to="/login" activeclassname="active">
-            Login
-          </NavLink>
-        </ul>
-      )}
+      <ul>
+        <NavLink to="/login" activeclassname="active">
+          Login
+        </NavLink>
+      </ul>
     </nav>
   );
 }
