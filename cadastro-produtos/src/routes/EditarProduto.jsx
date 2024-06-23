@@ -17,7 +17,7 @@ const EditarProduto = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/products/${id}`);
+                const response = await fetch(`http://localhost:5000/products/${id}`);
                 if (response.ok) {
                     const data = await response.json();
                     setProduct(data);
@@ -43,7 +43,7 @@ const EditarProduto = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch(`http://localhost:3000/products/${id}`, {
+            const response = await fetch(`http://localhost:5000/products/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json'

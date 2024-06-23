@@ -5,5 +5,16 @@
       "usuario": "admin",
       "senha": "admin"
     }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "1",
+      "price": "11",
+      "stock": "1",
+      "quantity": "1",
+      "category": "eletronico",
+      "description": "2"
+    }
   ]
 }

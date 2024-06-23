@@ -16,8 +16,8 @@ function Navbar() {
         </NavLink>
       </ul>
       <ul>
-        <NavLink to="/excluir/:id" activeclassname="active">
-          Excluir Produto
+        <NavLink to="/filtragem" activeclassname="active">
+          Filtragem por Categoria
         </NavLink>
       </ul>
       <ul>

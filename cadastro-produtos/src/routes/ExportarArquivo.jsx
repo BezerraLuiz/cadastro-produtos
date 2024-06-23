@@ -9,7 +9,7 @@ const ExportarArquivo = () => {
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:3000/products'); 
+                const response = await fetch('http://localhost:5000/products'); 
                 if (response.ok) {
                     const data = await response.json();
                     prepareCsvData(data);

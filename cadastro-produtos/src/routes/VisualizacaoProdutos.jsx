@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 const VisualizacaoProdutos = () => {
     const [products, setProducts] = useState([]);
-    const url = 'http://localhost:3000/products';
+    const url = 'http://localhost:5000/products';
 
     useEffect(() => {
         const fetchProducts = async () => {
             try {
-                const response = await fetch('http://localhost:3000/products');
+                const response = await fetch('http://localhost:5000/products');
                 if (response.ok) {
                     const data = await response.json();
                     setProducts(data);

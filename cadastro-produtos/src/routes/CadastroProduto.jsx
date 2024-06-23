@@ -13,7 +13,7 @@ function CadastroProduto() {
     }); 
 
     const [products, setProducts] = useState([]);
-    const url = "http://localhost:3000/products";
+    const url = "http://localhost:5000/products";
 
     useEffect(() => {
         const getProductsList = async () => {
