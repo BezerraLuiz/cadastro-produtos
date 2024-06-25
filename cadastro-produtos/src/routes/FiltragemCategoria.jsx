@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './styles/FiltragemCategoria.module.css'
 
 function FiltragemCategoria() {
     const [products, setProducts] = useState([]);
@@ -32,8 +33,8 @@ function FiltragemCategoria() {
 
     return (
         <div>
-            <h2>Filtrar por Categoria</h2>
-            <select value={selectedCategory} onChange={handleCategoryChange}>
+            <h2 style={{ marginBottom: '20px' }}>Filtrar por Categoria</h2>
+            <select id={styles.select_filtro} value={selectedCategory} onChange={handleCategoryChange}>
                 <option value=''>Todas as Categorias</option>
                 <option value='alimento'>Alimento</option>
                 <option value='eletronico'>Eletrônico</option>
@@ -47,10 +48,10 @@ function FiltragemCategoria() {
                 <option value='esporte'>Esporte</option>
             </select>
 
-            <h3>Lista de Produtos</h3>
-            <table>
-                <thead>
-                    <tr>
+            <h3 style={{ marginBottom: '20px' }}>Lista de Produtos</h3>
+            <table id={styles.tabela}>
+                <thead id={styles.cabecalho}>
+                    <tr id={styles.linha_tabela}>
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Preço</th>
@@ -60,21 +61,21 @@ function FiltragemCategoria() {
                         <th>Descrição</th>
                     </tr>
                 </thead>
-           <tbody>
-                {filteredProducts.map(product => (
-                    <tr key={product.id}>
-                        <td>{product.id}</td>
+                <tbody>
+                    {filteredProducts.map(product => (
+                        <tr key={product.id}>
+                            <td>{product.id}</td>
                             <td>{product.name}</td>
                             <td>{product.price}</td>
                             <td>{product.stock}</td>
                             <td>{product.quantity}</td>
                             <td>{product.category}</td>
                             <td>{product.description}</td>
-                            </tr>
-                ))}
-            </tbody>        
+                        </tr>
+                    ))}
+                </tbody>
             </table>
-            </div>
+        </div>
     );
 }
 

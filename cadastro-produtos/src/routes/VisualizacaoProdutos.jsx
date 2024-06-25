@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import styles from './styles/VisualizacaoProdutos.module.css'
 
 const VisualizacaoProdutos = () => {
     const [products, setProducts] = useState([]);
@@ -40,9 +41,9 @@ const VisualizacaoProdutos = () => {
     return (
         <div>
             <h2>Lista de Produtos</h2>
-            <table>
-                <thead>
-                    <tr>
+            <table id={styles.tabela}>
+                <thead id={styles.cabecalho}>
+                    <tr id={styles.linha_tabela}>
                         <th>ID</th>
                         <th>Nome</th>
                         <th>Preço</th>
@@ -65,9 +66,9 @@ const VisualizacaoProdutos = () => {
                             <td>{product.description}</td>
                             <td>
                                 <Link to={`/editar/${product.id}`}>
-                                    <button>Editar</button>
+                                    <button className={styles.btn} style={{ marginRight: '10px' }}>Editar</button>
                                 </Link>
-                                <button onClick={() => handleDelete(product.id)}>
+                                <button className={styles.btn} onClick={() => handleDelete(product.id)}>
                                     Excluir
                                 </button>
                             </td>

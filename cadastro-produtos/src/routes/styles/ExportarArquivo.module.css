@@ -1,0 +1,13 @@
+#btn {
+  background-color: #dbdada;
+  width: 250px;
+  height: 30px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+#btn:hover {
+  background-color: #b1b1b1;
+}

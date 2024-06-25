@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { saveAs } from 'file-saver';
 import Papa from 'papaparse';
-
+import styles from './styles/ExportarArquivo.module.css'
 
 const ExportarArquivo = () => {
     const [csvData, setCsvData] = useState([]);
@@ -43,7 +43,7 @@ const ExportarArquivo = () => {
     return (
         <div>
             <h2>Exportar relatório em CSV</h2>
-            <button onClick={handleExport}>Exportar CSV</button>
+            <button id={styles.btn} style={{ marginTop: '20px' }} onClick={handleExport}>Exportar CSV</button>
         </div>
     );
 };

@@ -1,0 +1,54 @@
+#tabela {
+  width: 80%;
+  margin: 20px auto;
+  border-collapse: collapse;
+  border: 2px solid #333;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#tabela thead {
+  background-color: #f2f2f2;
+}
+
+#tabela th,
+#tabela td {
+  padding: 12px 15px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+#tabela th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#tabela tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#tabela tr:hover {
+  background-color: #f1f1f1;
+}
+
+#cabecalho {
+  text-align: center;
+}
+
+#linha_tabela {
+  background-color: #f4f4f4;
+}
+
+.btn {
+  background-color: #dbdada;
+  width: 100px;
+  height: 20px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background-color: #b1b1b1;
+}
