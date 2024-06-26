@@ -9,21 +9,21 @@
   "products": [
     {
       "id": "1",
-      "name": "1",
-      "price": "1",
-      "stock": "1",
-      "quantity": "1",
+      "name": "Ketchup",
+      "price": "13,00",
+      "stock": "100",
+      "quantity": "3",
       "category": "alimento",
-      "description": "1"
+      "description": "Ketchup heinz"
     },
     {
       "id": "2",
-      "name": "2",
-      "price": "2",
-      "stock": "2",
-      "quantity": "2",
-      "category": "saude",
-      "description": "2"
+      "name": "Celular",
+      "price": "2000",
+      "stock": "20",
+      "quantity": "10",
+      "category": "eletronico",
+      "description": "Celular android 13 max"
     }
   ]
 }

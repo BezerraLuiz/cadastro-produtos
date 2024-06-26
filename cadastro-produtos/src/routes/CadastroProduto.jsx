@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import styles from './styles/CadastroProduto.module.css'
 
 
 function CadastroProduto() {
@@ -76,10 +77,10 @@ function CadastroProduto() {
 
     return(
       
-        <div>
-            <h2>Cadastrar Produto</h2>
+        <div className={styles.container}>
+            <h2 style={{ marginBottom: '20px' }}>Cadastrar Produto</h2>
             <form onSubmit={handleSubmit}/>
-                <div>
+                <div className={styles['form-group']}>
                     <label>ID:</label>
                     <input
                        type='text'
@@ -89,7 +90,7 @@ function CadastroProduto() {
                     />
                 </div>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Nome:</label>
                     <input
                         type="text"
@@ -98,7 +99,7 @@ function CadastroProduto() {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Preço:</label>
                     <input
                         type="text"
@@ -107,7 +108,7 @@ function CadastroProduto() {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Estoque:</label>
                      <input
                         type="text"
@@ -116,7 +117,7 @@ function CadastroProduto() {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Quantidade:</label>
                     <input
                         type='number'
@@ -125,7 +126,7 @@ function CadastroProduto() {
                         onChange={handleChange}
                         />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Categoria:</label>
                     <select name='category' value={product.category} onChange={handleChange}>
                         <option value='' disabled>Selecione uma categoria</option>
@@ -142,7 +143,8 @@ function CadastroProduto() {
 
                     </select>
                 </div>
-                <div>
+                     
+                    <div className={styles['form-group']} >
                     <label>Descrição:</label>
                     <textarea
                         name="description"
@@ -150,7 +152,7 @@ function CadastroProduto() {
                         onChange={handleChange}
                     ></textarea>
                 </div>
-                <button type="submit" onClick={handleSubmit}>Cadastrar</button>
+                <button className={styles.btn} style={{ marginTop: '20px' }} type="submit" onClick={handleSubmit}>Cadastrar</button>
             </form>
         
         </div>

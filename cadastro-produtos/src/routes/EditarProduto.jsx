@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import styles from './styles/EditarProduto.module.css'
 
 const EditarProduto = () => {
     const { id } = useParams();
@@ -62,10 +63,10 @@ const EditarProduto = () => {
     };
 
     return (
-        <div>
+        <div className={styles.container}>
             <h2>Editar Produto</h2>
             <form onSubmit={handleSubmit}>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Nome:</label>
                     <input
                         type="text"
@@ -74,7 +75,7 @@ const EditarProduto = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Preço:</label>
                     <input
                         type="text"
@@ -83,7 +84,7 @@ const EditarProduto = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Estoque:</label>
                     <input
                         type="text"
@@ -92,7 +93,7 @@ const EditarProduto = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Quantidade:</label>
                     <input
                         type="number"
@@ -101,7 +102,7 @@ const EditarProduto = () => {
                         onChange={handleChange}
                     />
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                 <label>Categoria:</label>
                     <select name='category' value={product.category} onChange={handleChange}>
                         <option value='' disabled>Selecione uma categoria</option>
@@ -118,16 +119,16 @@ const EditarProduto = () => {
 
                     </select>
                 </div>
-                <div>
+                <div className={styles['form-group']}>
                     <label>Descrição:</label>
                     <textarea
                         name="description"
                         value={product.description}
                         onChange={handleChange}
                     ></textarea>
-                    <button type="submit">Atualizar</button>
+                    
                 </div>
-              
+                <button className={styles.btn} style={{ marginTop: '20px' }} type="submit">Atualizar</button>
             </form>
         </div>
     );

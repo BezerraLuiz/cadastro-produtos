@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  
+.container {
+    border: 1px solid black;
+    background-color: #f4f4f4;
+    box-shadow: 0 4px 7px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+.btn {
+    background-color: #dbdada;
+    width: 250px;
+    height: 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+  
+.btn:hover {
+    background-color: #b1b1b1;
+  }
+
+.container input,
+.container select,
+.container textarea {
+  flex: 1;
+  width: 50%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  width: 100px; 
+  margin-right: 10px; 
+  font-weight: 600;
+}
+
+
+
+
+  
